@@ -37,7 +37,7 @@ RUN curl -SLO https://www.cpan.org/src/5.0/perl-5.26.3.tar.gz \
 ## from tianon/perl
 ENV PERL_CPANM_OPT --verbose --mirror https://cpan.metacpan.org --mirror-only
 RUN cpanm Digest::SHA Module::Signature Test::Most Test::Doctest LWP::UserAgent \
-    Email::MIME \
+    Email::MIME XML::Simple \
     && rm -rf ~/.cpanm
 ENV PERL_CPANM_OPT $PERL_CPANM_OPT --verify
 
