@@ -2,7 +2,7 @@ FROM alpine
 
 ## alpine curl and wget aren't fully compatible, so we install them
 ## here. gnupg is needed for Module::Signature.
-RUN apk update && apk upgrade && apk add curl tar make gcc build-base wget gnupg git
+RUN apk update && apk upgrade && apk add curl tar make gcc build-base wget gnupg git bash
 
 RUN mkdir -p /usr/src/perl
 
